@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical AI Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="chat-container">
+
+        <div class="header">
+            <h1>🩺 Medical AI Chatbot</h1>
+            <p>Your general health information assistant</p>
+        </div>
+
+        <div id="chat-box" class="chat-box">
+            <div class="message bot">
+                Hello! 👋 I'm your medical information assistant.
+                <br><br>
+                You can ask me about common topics such as fever, cold,
+                cough, headache, diabetes, allergies, and more.
+            </div>
+        </div>
+
+        <div class="input-area">
+            <input
+                type="text"
+                id="user-input"
+                placeholder="Ask a health-related question..."
+                autocomplete="off"
+            >
+
+            <button onclick="sendMessage()">Send</button>
+        </div>
+
+        <button class="clear-btn" onclick="clearChat()">
+            Clear Chat
+        </button>
+
+        <div class="disclaimer">
+            ⚠️ This chatbot provides general health information only.
+            It does not provide medical diagnosis or treatment.
+            For serious or emergency symptoms, contact a healthcare professional.
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
