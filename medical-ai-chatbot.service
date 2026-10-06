@@ -1,0 +1,15 @@
+[Unit]
+Description=Medical AI Chatbot Flask Application
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/var/www/medical-ai-chatbot
+EnvironmentFile=/etc/medical-ai-chatbot/production.env
+ExecStart=/var/www/medical-ai-chatbot/venv/bin/gunicorn --workers 2 --bind 127.0.0.1:8000 app:app
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
