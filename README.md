@@ -1,15 +1,6 @@
 # Medical AI Chatbot
 
-A simple web-based medical information chatbot that provides general information about common health topics.
-
-## Features
-
-- Interactive chatbot interface
-- Answers common health-related questions
-- Simple and responsive web design
-- Clear chat functionality
-- Runs locally without a paid API
-- Medical safety disclaimer
+A Flask-based medical AI chatbot that provides general health-related information through a simple web interface.
 
 ## Technologies Used
 
@@ -18,30 +9,31 @@ A simple web-based medical information chatbot that provides general information
 - HTML
 - CSS
 - JavaScript
+- Pytest
+- Gunicorn
+- Git & GitHub
+- GitHub Actions
+- Render
 
 ## Project Structure
 
 medical-ai-chatbot/
-│
-├── app.py
-├── requirements.txt
-├── README.md
-├── .gitignore
-│
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── static/
 ├── templates/
-│   └── index.html
-│
-└── static/
-    ├── style.css
-    └── script.js
+├── app.py
+├── test_app.py
+├── requirements.txt
+├── deploy.sh
+├── medical-ai-chatbot.service
+└── README.md
 
-## How to Run
+## Local Setup
 
-1. Clone the repository.
-
-2. Open the project folder in VS Code.
-
-3. Create a virtual environment:
+Clone the repository:
 
 ```bash
-python -m venv venv
+git clone https://github.com/tanmayi09/medical-ai-chatbot.git
+cd medical-ai-chatbot
